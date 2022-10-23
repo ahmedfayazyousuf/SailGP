@@ -6,6 +6,7 @@ import "./App.css";
 import Home from "./components/Home/Home";
 import Leaderboard from "./components/Leaderboard/Leaderboard";
 import Timetaken from "./components/Timetaken/Timetaken";
+import Thankyou from "./components/Thankyou/Thankyou";
 import Signup from "./components/Signup/Signup";
 import Errorpage from "./components/Errorpage/Errorpage";
 import {initialState, reducer } from "../src/reducer/UseReducer";
@@ -19,6 +20,7 @@ const Routing = () => {
       <Route path="/leaderboard" element={<Leaderboard />} />
       <Route path="/timetaken" element={<Timetaken />} />
       <Route path="/signup" element={<Signup />} />
+      <Route path="/thankyou" element={<Thankyou />} />
       <Route path="*" element={<Errorpage />} />
     </Routes>
   )

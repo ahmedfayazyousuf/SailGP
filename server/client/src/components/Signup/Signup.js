@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import "./Signup.css";
 import Logo1 from '../images/Logo1.png';
-// import Logo2 from '../images/Logo2.png';
+import Logo2 from '../images/Logo2.png';
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
-import { notInitialized } from 'react-redux/es/utils/useSyncExternalStore';
+// import { notInitialized } from 'react-redux/es/utils/useSyncExternalStore';
 
 const Signup = () => {
     const history = useNavigate();
@@ -186,14 +186,14 @@ const Signup = () => {
 
                                 <div className="form-check" style={{marginTop: '10px'}}>
                                     <input className="form-check-input" type="checkbox" value="" id="invalidCheck" required/>
-                                    <label className="form-check-label" style={{fontSize: '15px'}}>If under 16, please tick to confirm parental consent.</label>
+                                    <label className="form-check-label" style={{fontSize: '12px'}}>If under 16, please tick to confirm parental consent.</label>
                                     <div className="invalid-feedback">If under 16, please tick to confirm parental consent.</div>
                                 </div>
 
 
                                 <div className="form-check">
                                     <input className="form-check-input" type="checkbox" value="" id="invalidCheck" required/>
-                                    <label className="form-check-label" style={{fontSize: '15px'}}>I would like to receive information from P&O Marinas regarding sailing information and promotions.</label>
+                                    <label className="form-check-label" style={{fontSize: '12px'}}>I would like to receive information from P&O Marinas regarding sailing information and promotions.</label>
                                     <div className="invalid-feedback">If under 16, please tick to confirm parental consent.</div>
                                 </div>
 
@@ -234,10 +234,22 @@ const Signup = () => {
                                             }}>
                                                 SUBMIT
                                             </button>
-                                        </Link>
+                                        </Link><br></br>
 
+
+                                        <img src={Logo2} alt="Logo" 
+                                        style={{
+                                            height: '30px',
+                                            width: '150px',
+                                            marginTop: '20px',
+                                        }}
+                                    />
+                                            
                                         
                                     </div>
+
+
+                                    
 
 
                                 </form>
