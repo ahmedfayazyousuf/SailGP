@@ -1,6 +1,7 @@
 import React from 'react';
 import Logo1 from '../images/Logo1.png';
- 
+import { Link } from "react-router-dom";
+
 const Profile = () => {
 
 
@@ -12,13 +13,19 @@ const Profile = () => {
                     <div className="form-holder">
                         <div className="form-content">
                             <div className="form-items" >
-                                <img src={Logo1} alt="Logo" 
+                            <div
                                 style={{
-                                    height: '65 px',
-                                    width: '250px',
-                                    marginBottom: '20px',
-                                }}
-                                />
+                                    justifyContent: 'center',
+                                    textAlign: 'center',
+                                }}>
+                                    <img src={Logo1} alt="Logo" 
+                                    style={{
+                                        height: '65 px',
+                                        width: '250px',
+                                        marginBottom: '20px',  
+                                    }}
+                                    />
+                                </div>
                                 <form method="POST" id="register-form" className="requires-validation" noValidate>
 
 
@@ -27,6 +34,7 @@ const Profile = () => {
                                     color: 'white',
                                     justifyContent: 'center',
                                     alignItems: 'center',
+                                    marginTop: '20px',
                                     textAlign: 'center'
                                 }}>
                                     <tr>
@@ -64,13 +72,50 @@ const Profile = () => {
                                         <td>93</td>
                                     </tr>
 
+                                    <tr>
+                                        <td>NABEEL</td>
+                                        <td>43</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>ALEEM</td>
+                                        <td>57</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>KWEEN</td>
+                                        <td>09</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>HOMSI</td>
+                                        <td>49</td>
+                                    </tr>
+
                                 </table>
 
                         
 
-                                    <div className="form-button mt-3">
-                                        <button id="signup" name="signup" type="submit" className="btn btn-primary" >SUBMIT</button>
-                                    </div>
+                                <div
+                                style={{
+                                    justifyContent: 'center',
+                                    textAlign: 'center',
+                                }}>
+                                    <Link to="/signup">
+                                        <button 
+                                        style={{
+                                            paddingRight: '55px',
+                                            paddingLeft: '55px',
+                                            padding: '10px',
+                                            marginTop: '20px',
+                                            backgroundColor: 'white',
+                                            fontWeight: '1000',
+                                        }}>
+                                            END
+                                        </button>
+                                    </Link>
+                                </div>
+
                                 </form>
                             </div>
                         </div>
