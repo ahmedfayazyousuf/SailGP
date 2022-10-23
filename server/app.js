@@ -3,13 +3,22 @@ const mongoose = require('mongoose');
 const express = require('express');
 const app = express();
 const authenticate = require("./middleware/authenticate");
+var bodyParser = require('body-parser')
+var cors = require('cors')
 
+app.use(cors())
+
+
+const routes = require('./routes/routes');
+
+app.use('/api', routes)
 dotenv.config({path: './config.env' });
 
 require('./db/conn');
 const User = require('./model/userSchema');
 
 app.use(express.json()); 
+app.use(express.urlencoded()); 
 
 //linking router files to make routing easy
 app.use(require('./router/auth'));

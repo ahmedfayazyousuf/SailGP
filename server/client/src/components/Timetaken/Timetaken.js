@@ -19,7 +19,7 @@ const Timetaken = () => {
         // console.log(e);
         value = e.target.value;
 
-        setUser({...user, [timetaken]:value})
+        setUser({'timetaken':value})
         console.log(user)
     }
 
@@ -28,8 +28,9 @@ const Timetaken = () => {
         e.preventDefault();
         //object destruction so dont need to write user.name etc again and again
         const { timetaken } = user;
+        console.log(timetaken)
         
-        const res = await fetch(`/register/${location.state.id}`, {
+        const res = await fetch(`http://localhost:5000/api/update/${location.state.id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
