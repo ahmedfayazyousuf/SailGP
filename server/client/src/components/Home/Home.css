@@ -1,0 +1,17 @@
+body{
+    background-color: #061A1B;
+}
+
+.welcome {
+    color: red;
+}
+
+.formitems {
+    display: flex;
+    width: 50%;
+    height: 50%;
+    background-color: white;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+}
