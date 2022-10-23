@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import "./Signup.css";
 import Logo1 from '../images/Logo1.png';
 // import Logo2 from '../images/Logo2.png';
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Signup = () => {
-    // const history = useNavigate();
+    const history = useNavigate();
     const [user,setUser] = useState({
         name:"",email:"",phone:"", day:"", month:"", year:"", timetaken:0
     });
@@ -39,6 +39,8 @@ const Signup = () => {
 
         const data = await res.json();
 
+        // console.log(data._id)
+
         if(data.status === 422 || !data) {
             window.alert("Invalid Credentials - If error persists, contact admin");
             console.log("Invalid Credentials - If error persists, contact admin");
@@ -46,7 +48,7 @@ const Signup = () => {
             window.alert("Registration Successful! Welcome Aboard!");
             console.log("Registration Successful! Welcome Aboard!");
 
-            // history("/login");
+            history("/timetaken",{state:{id:data.id}});
         }
 
     }
