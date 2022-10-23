@@ -63,7 +63,7 @@ const Signup = () => {
                                 <div
                                 style={{
                                     justifyContent: 'center',
-                                    backgroundColor: 'red',
+                                    textAlign: 'center',
                                 }}>
                                     <img src={Logo1} alt="Logo" 
                                     style={{
