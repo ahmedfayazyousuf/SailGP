@@ -7,7 +7,6 @@ import Home from "./components/Home/Home";
 import Leaderboard from "./components/Leaderboard/Leaderboard";
 import Timetaken from "./components/Timetaken/Timetaken";
 import Signup from "./components/Signup/Signup";
-import Logout from "./components/Logout/Logout";
 import Errorpage from "./components/Errorpage/Errorpage";
 import {initialState, reducer } from "../src/reducer/UseReducer";
 
@@ -20,7 +19,6 @@ const Routing = () => {
       <Route path="/leaderboard" element={<Leaderboard />} />
       <Route path="/timetaken" element={<Timetaken />} />
       <Route path="/signup" element={<Signup />} />
-      <Route path="/logout" element={<Logout />} />
       <Route path="*" element={<Errorpage />} />
     </Routes>
   )

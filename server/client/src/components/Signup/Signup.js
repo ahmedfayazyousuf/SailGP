@@ -3,6 +3,8 @@ import "./Signup.css";
 import Logo1 from '../images/Logo1.png';
 // import Logo2 from '../images/Logo2.png';
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { notInitialized } from 'react-redux/es/utils/useSyncExternalStore';
 
 const Signup = () => {
     const history = useNavigate();
@@ -194,11 +196,50 @@ const Signup = () => {
                                     <label className="form-check-label" style={{fontSize: '15px'}}>I would like to receive information from P&O Marinas regarding sailing information and promotions.</label>
                                     <div className="invalid-feedback">If under 16, please tick to confirm parental consent.</div>
                                 </div>
-                        
 
-                                    <div className="form-button mt-3">
-                                        <button id="signup" name="signup" type="submit" className="btn btn-primary" onClick={PostData}>SUBMIT</button>
+                                    <div
+                                    style={{
+                                        justifyContent: 'center',
+                                        textAlign: 'center',
+                                        marginTop: '10px',  
+                                    }}>
+
+                                        <Link to="/">
+                                            <button 
+                                            style={{
+                                                paddingRight: '55px',
+                                                paddingLeft: '55px',
+                                                backgroundColor: '#061A1B',
+                                                color: 'grey',
+                                                marginRight: '5px',
+                                                borderColor: 'grey',
+                                                padding: '10px',
+                                                fontWeight: '1000',
+                                            }}>
+                                                CANCEL
+                                            </button>
+                                        </Link>
+
+
+                                            
+                                        <Link to="/signup">
+                                            <button 
+                                            onClick={PostData}
+                                            style={{
+                                                paddingRight: '55px',
+                                                paddingLeft: '55px',
+                                                padding: '10px',
+                                                backgroundColor: 'white',
+                                                fontWeight: '1000',
+                                            }}>
+                                                SUBMIT
+                                            </button>
+                                        </Link>
+
+                                        
                                     </div>
+
+
                                 </form>
                             </div>
                         </div>
