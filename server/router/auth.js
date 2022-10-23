@@ -14,7 +14,7 @@ const User = require("../model/userSchema");
 
 router.post('/register', async (req, res) => {
 
-    const { name, email, phone, day, month, year, timetaken } = req.body;
+    const { name, email, phone, day, month, year } = req.body;
 
     if(!name || !email || !phone || !day || !month || !year)
     {
@@ -33,9 +33,28 @@ router.post('/register', async (req, res) => {
 });
 
 
-router.post('/timetaken', async (req, res) => {
+
+router.post('/timer', async (req, res) => {
+
+    const { time } = req.body;
+
+    if(!name || !email || !phone || !day || !month || !year)
+    {
+        return res.status(422).json({ error: "Please fill all the fields properly" });
+    } 
+
+        const user = new User({name, email, phone, day, month, year });
+
+        //hashing
+
+        await user.save();
+
+        res.status(201).json({ message:"User Successfully Registered!" })
+
 
 });
+
+
 
 
 
