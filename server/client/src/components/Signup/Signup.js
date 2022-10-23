@@ -60,14 +60,19 @@ const Signup = () => {
                     <div className="form-holder">
                         <div className="form-content">
                             <div className="form-items" >
-                                <img src={Logo1} alt="Logo" 
+                                <div
                                 style={{
-                                    height: '65 px',
-                                    width: '250px',
-                                    marginBottom: '20px',
-                                    
-                                }}
-                                />
+                                    justifyContent: 'center',
+                                    backgroundColor: 'red',
+                                }}>
+                                    <img src={Logo1} alt="Logo" 
+                                    style={{
+                                        height: '65 px',
+                                        width: '250px',
+                                        marginBottom: '20px',  
+                                    }}
+                                    />
+                                </div>
                                 <form method="POST" id="register-form" className="requires-validation" noValidate>
 
 
