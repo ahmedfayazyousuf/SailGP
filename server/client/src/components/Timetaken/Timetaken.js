@@ -11,14 +11,16 @@ const Timetaken = () => {
         timetaken:""
     });
 
-    let name, value;
+    console.log(location.state.id)
+
+    let timetaken, value;
 
     const handleInputs = (e) => {
-        console.log(e);
-        name = e.target.name;
+        // console.log(e);
         value = e.target.value;
 
-        setUser({...user, [name]:value})
+        setUser({...user, [timetaken]:value})
+        console.log(user)
     }
 
 //fetch api to transfer data
@@ -27,8 +29,8 @@ const Timetaken = () => {
         //object destruction so dont need to write user.name etc again and again
         const { timetaken } = user;
         
-        const res = await fetch("/register", {
-            method: "POST",
+        const res = await fetch(`/register/${location.state.id}`, {
+            method: "PUT",
             headers: {
                 "Content-Type": "application/json"
             },
