@@ -2,9 +2,49 @@ import React from 'react';
 import Logo1 from '../images/Logo1.png';
 import { Link } from "react-router-dom";
 
+import { useEffect } from 'react';
+import { useState } from 'react';
+
 const Profile = () => {
 
+    const [data, setData] = useState([]);
 
+    const GetData = async () => {
+        //object destruction so dont need to write user.name etc again and again
+
+        
+        const res = await fetch(`http://localhost:5000/api/getAll`, {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json"
+            }
+        });
+
+        const data = await res.json();
+
+        
+        setData(data);
+        console.log(data)
+
+        if(data.status === 422 || !data) {
+            
+            console.log("Invalid Credentials - If error persists, contact admin");
+        } else {
+           
+            console.log("Registration Successful! Welcome Aboard!");
+
+            // history("/login");
+        }
+
+    }
+
+    useEffect(()=>{
+        GetData();
+    },[])
+
+
+
+    
 
     return (
         <>
@@ -42,6 +82,7 @@ const Profile = () => {
                                             fontWeight: '700',
                                         }}>
                                             NAME
+                                            {data[0].timetaken}
                                         </td>
 
 
