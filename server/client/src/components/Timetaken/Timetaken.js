@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
+
+import { Link } from "react-router-dom";
 import Logo1 from '../images/Logo1.png';
+import Logo2 from '../images/Logo2.png';
 import {useLocation} from 'react-router-dom';
 // import Logo2 from '../images/Logo2.png';
 // import { useNavigate } from "react-router-dom";
@@ -61,14 +64,20 @@ const Timetaken = () => {
                     <div className="form-holder">
                         <div className="form-content">
                             <div className="form-items" >
-                                <img src={Logo1} alt="Logo" 
-                                style={{
-                                    height: '65 px',
-                                    width: '250px',
-                                    marginBottom: '20px',
-                                    
-                                }}
-                                />
+                                <div
+                                    style={{
+                                        justifyContent: 'center',
+                                        textAlign: 'center',
+                                    }}>
+                                        <img src={Logo1} alt="Logo" 
+                                        style={{
+                                            height: '65 px',
+                                            width: '250px',
+                                            marginBottom: '40px', 
+                                        }}
+                                    />
+                                </div>
+
                                 <form method="POST" id="register-form" className="requires-validation" noValidate>
 
 
@@ -89,9 +98,40 @@ const Timetaken = () => {
                                     </div>
 
                         
+                                    <div
+                                    style={{
+                                        justifyContent: 'center',
+                                        textAlign: 'center',
+                                        marginTop: '50px',
+                                    }}
+                                    >
+                                        <Link to="/leaderboard">
+                                            <button 
+                                            style={{
+                                                paddingRight: '25px',
+                                                paddingLeft: '25px',
+                                                padding: '10px',
+                                                backgroundColor: 'white',
+                                                fontWeight: '1000',
+                                            }}>
+                                                GO TO LEADERBOARD
+                                            </button>
+                                        </Link>
+                                    </div>
 
-                                    <div className="form-button mt-3">
-                                        <button id="signup" name="signup" type="submit" className="btn btn-primary" onClick={PostData}>SUBMIT</button>
+
+                                    <div
+                                        style={{
+                                            justifyContent: 'center',
+                                            textAlign: 'center',
+                                        }}>
+                                            <img src={Logo2} alt="Logo" 
+                                            style={{
+                                                height: '65 px',
+                                                width: '250px',
+                                                marginTop: '50px',  
+                                            }}
+                                            />
                                     </div>
                                 </form>
                             </div>

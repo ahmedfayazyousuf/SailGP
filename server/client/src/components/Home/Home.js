@@ -16,14 +16,14 @@ const Home = () => {
                                 <form>
                                     <div class="container" className="profilepanel">
                                                 <div class="row" className="profilepanel">
-                                                <img src={Logo1} alt="Logo" 
-                                                style={{
-                                                    height: '78px',
-                                                    width: '300px',
-                                                    marginTop: '100px',
-                                                    marginBottom: '100px',
-                                                }}
-                                                />
+                                                    <img src={Logo1} alt="Logo" 
+                                                    style={{
+                                                        height: '78px',
+                                                        width: '300px',
+                                                        marginTop: '100px',
+                                                        marginBottom: '100px',
+                                                    }}
+                                                    />
                                                 </div>
 
                                                 <div>
@@ -39,9 +39,9 @@ const Home = () => {
                                                             TAP TO REGISTER
                                                         </button>
                                                     </Link>
-
-
                                                 </div>
+
+
                                                 <img src={Logo2} alt="Logo" 
                                                     style={{
                                                         height: '60px',
