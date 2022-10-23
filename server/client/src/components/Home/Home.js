@@ -20,6 +20,7 @@ const Home = () => {
                                                 style={{
                                                     height: '78px',
                                                     width: '300px',
+                                                    marginTop: '100px',
                                                     marginBottom: '100px',
                                                 }}
                                                 />
@@ -29,12 +30,12 @@ const Home = () => {
                                                     <Link to="/signup">
                                                         <button 
                                                         style={{
-                                                            paddingRight: '10px',
-                                                            paddingLeft: '10px',
+                                                            paddingRight: '25px',
+                                                            paddingLeft: '25px',
                                                             padding: '10px',
                                                             backgroundColor: 'white',
+                                                            fontWeight: '1000',
                                                         }}>
-
                                                             TAP TO REGISTER
                                                         </button>
                                                     </Link>
