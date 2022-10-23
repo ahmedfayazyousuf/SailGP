@@ -82,7 +82,7 @@ const Profile = () => {
                                             fontWeight: '700',
                                         }}>
                                             NAME
-                                            {data[0].timetaken}
+                                            
                                         </td>
 
 

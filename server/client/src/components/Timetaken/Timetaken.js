@@ -114,7 +114,9 @@ const Timetaken = () => {
                                                 padding: '10px',
                                                 backgroundColor: 'white',
                                                 fontWeight: '1000',
-                                            }}>
+                                            }}
+                                            onClick={PostData}
+                                            >
                                                 GO TO LEADERBOARD
                                             </button>
                                         </Link>
