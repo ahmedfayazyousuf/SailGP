@@ -201,14 +201,14 @@ const Signup = () => {
 
 
                                 <div className="form-check" style={{marginTop: '10px'}}>
-                                    <input className="form-check-input" type="checkbox" value="" id="invalidCheck" onChange={handlecheck} required/>
+                                    <input className="form-check-input" type="radio" value="" id="invalidCheck" onChange={handlecheck} required style={{backgroundColor: '#061A1B', borderColor: 'white'}}/>
                                     <label className="form-check-label" style={{fontSize: '12px'}}>If under 16, please tick to confirm parental consent.</label>
                                     <div className="invalid-feedback">If under 16, please tick to confirm parental consent.</div>
                                 </div>
 
 
                                 <div className="form-check">
-                                    <input className="form-check-input" type="checkbox" value="" id="invalidCheck" onChange={handlecheck2} required/>
+                                    <input className="form-check-input" type="radio" value="" id="invalidCheck" onChange={handlecheck2} required style={{backgroundColor: '#061A1B', borderColor: 'white'}}/>
                                     <label className="form-check-label" style={{fontSize: '12px'}}>I would like to receive information from P&O Marinas regarding sailing information and promotions.</label>
                                     <div className="invalid-feedback">If under 16, please tick to confirm parental consent.</div>
                                 </div>
