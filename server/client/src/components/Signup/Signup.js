@@ -28,7 +28,7 @@ const Signup = () => {
         //object destruction so dont need to write user.name etc again and again
         const { name, email, phone, day, month, year} = user;
         
-        const res = await fetch("/register", {
+        const res = await fetch("http://localhost:5000/register", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -59,7 +59,7 @@ const Signup = () => {
         <>
             <div className="form-body">
                 <div className="row">
-                    <div className="form-holder">
+                    <div className="form-holder" style={{margin: 'auto',marginTop: '10px'}}>
                         <div className="form-content">
                             <div className="form-items" >
                                 <div
@@ -207,8 +207,8 @@ const Signup = () => {
                                         <Link to="/">
                                             <button 
                                             style={{
-                                                paddingRight: '55px',
-                                                paddingLeft: '55px',
+                                                paddingRight: '75px',
+                                                paddingLeft: '75px',
                                                 backgroundColor: '#061A1B',
                                                 color: 'grey',
                                                 marginRight: '5px',
@@ -226,8 +226,8 @@ const Signup = () => {
                                             <button 
                                             onClick={PostData}
                                             style={{
-                                                paddingRight: '55px',
-                                                paddingLeft: '55px',
+                                                paddingRight: '75px',
+                                                paddingLeft: '75px',
                                                 padding: '10px',
                                                 backgroundColor: 'white',
                                                 fontWeight: '1000',
