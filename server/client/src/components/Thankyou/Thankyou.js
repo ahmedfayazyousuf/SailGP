@@ -25,19 +25,7 @@ const Thankyou = () => {
                                                     }}
                                                 />  
 
-                                                <div>
-                                                    <Link to="/">
-                                                        <button 
-                                                        style={{
-                                                            backgroundColor: '#061A1B',
-                                                            color: '#061A1B',
-                                                            border: '0',
-                                                        }}>
-                                                            TAP TO REGISTER
-                                                        </button>
-                                                    </Link>
-                                                </div>
-
+                                                    <br></br>
 
                                                 <img src={Logo2} alt="Logo" 
                                                     style={{

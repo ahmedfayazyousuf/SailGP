@@ -49,7 +49,7 @@ const Signup = () => {
         } else {
             console.log("Registration Successful! Welcome Aboard!");
 
-            history("/timetaken",{state:{id:data.id}});
+            history("/thankyou",{state:{id:data.id}});
         }
 
     }
@@ -210,7 +210,7 @@ const Signup = () => {
                                                 paddingLeft: '75px',
                                                 backgroundColor: '#061A1B',
                                                 color: 'grey',
-                                                marginRight: '5px',
+                                                marginRight: '20px',
                                                 borderColor: 'grey',
                                                 padding: '10px',
                                                 fontWeight: '1000',
