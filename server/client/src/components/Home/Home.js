@@ -44,10 +44,10 @@ const Home = () => {
 
                                                 <img src={Logo2} alt="Logo" 
                                                     style={{
-                                                        height: '60px',
-                                                        width: '300px',
+                                                        height: '40.5px',
+                                                        width: '250px',
                                                         marginBottom: '100px',
-                                                        marginTop: '100px',
+                                                        marginTop: '200px',
                                                     }}
                                                 />
                                     </div>

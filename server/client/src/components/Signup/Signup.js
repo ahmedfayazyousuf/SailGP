@@ -237,12 +237,13 @@ const Signup = () => {
 
 
                                         <img src={Logo2} alt="Logo" 
-                                        style={{
-                                            height: '30px',
-                                            width: '150px',
-                                            marginTop: '20px',
-                                        }}
-                                    />
+                                                    style={{
+                                                        height: '40.5px',
+                                                        width: '250px',
+                                                        marginBottom: '100px',
+                                                        marginTop: '20px',
+                                                    }}
+                                                />
                                             
                                         
                                     </div>

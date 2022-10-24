@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from "react-router-dom";
 import Logo2 from '../images/Logo2.png';
 import thankyou from '../images/thankyou.png';
 
@@ -29,10 +28,10 @@ const Thankyou = () => {
 
                                                 <img src={Logo2} alt="Logo" 
                                                     style={{
-                                                        height: '20%',
-                                                        width: '20%',
+                                                        height: '40.5px',
+                                                        width: '250px',
                                                         marginBottom: '100px',
-                                                        marginTop: '100px',
+                                                        marginTop: '200px',
                                                     }}
                                                 />
                                     </div>
