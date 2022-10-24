@@ -9,9 +9,14 @@ import { Link } from "react-router-dom";
 const Signup = () => {
     const history = useNavigate();
     const [user,setUser] = useState({
-        name:"",email:"",phone:"", day:"", month:"", year:"", timetaken:0
+        name:"",email:"",phone:"", day:"", month:"", year:"", timetaken:0, age:false, consent:false
     });
 
+    // const [age,setAge] = useState("");
+
+    var age = false;
+    
+    var consent = false;
     let name, value;
 
     const handleInputs = (e) => {
@@ -26,7 +31,7 @@ const Signup = () => {
     const PostData = async (e) => {
         e.preventDefault();
         //object destruction so dont need to write user.name etc again and again
-        const { name, email, phone, day, month, year} = user;
+        const { name, email, phone, day, month, year, age, consent} = user;
         
         const res = await fetch("http://localhost:5000/register", {
             method: "POST",
@@ -35,7 +40,7 @@ const Signup = () => {
             },
             body:JSON.stringify({ 
                 // name: name doesnt need to be written because its the same name
-                name, email, phone, day, month, year
+                name, email, phone, day, month, year, age, consent
             })
         });
 
@@ -52,6 +57,18 @@ const Signup = () => {
             history("/thankyou",{state:{id:data.id}});
         }
 
+    }
+
+    function handlecheck (){
+
+        setUser({...user, age:!age})
+        console.log(user)
+    }
+
+    function handlecheck2 (){
+
+        setUser({...user, consent:!consent})
+        console.log(user)
     }
 
     return (
@@ -184,14 +201,14 @@ const Signup = () => {
 
 
                                 <div className="form-check" style={{marginTop: '10px'}}>
-                                    <input className="form-check-input" type="checkbox" value="" id="invalidCheck" required/>
+                                    <input className="form-check-input" type="checkbox" value="" id="invalidCheck" onChange={handlecheck} required/>
                                     <label className="form-check-label" style={{fontSize: '12px'}}>If under 16, please tick to confirm parental consent.</label>
                                     <div className="invalid-feedback">If under 16, please tick to confirm parental consent.</div>
                                 </div>
 
 
                                 <div className="form-check">
-                                    <input className="form-check-input" type="checkbox" value="" id="invalidCheck" required/>
+                                    <input className="form-check-input" type="checkbox" value="" id="invalidCheck" onChange={handlecheck2} required/>
                                     <label className="form-check-label" style={{fontSize: '12px'}}>I would like to receive information from P&O Marinas regarding sailing information and promotions.</label>
                                     <div className="invalid-feedback">If under 16, please tick to confirm parental consent.</div>
                                 </div>

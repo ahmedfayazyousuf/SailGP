@@ -14,14 +14,14 @@ const User = require("../model/userSchema");
 
 router.post('/register', async (req, res) => {
 
-    const { name, email, phone, day, month, year } = req.body;
+    const { name, email, phone, day, month, year, age, consent } = req.body;
 
     if(!name || !email || !phone || !day || !month || !year)
     {
         return res.status(422).json({ error: "Please fill all the fields properly" });
     } 
 
-        const user = new User({name, email, phone, day, month, year });
+        const user = new User({name, email, phone, day, month, year, age, consent });
 
         //hashing
 

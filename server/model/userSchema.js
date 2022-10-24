@@ -29,6 +29,15 @@ const userSchema = new mongoose.Schema({
         type: Number,
         default: 0,
     },
+    age: {
+        type: Boolean,
+        default: false,
+
+    },
+    consent: {
+        type: Boolean,
+        default: false,
+    }
 })
 
 
