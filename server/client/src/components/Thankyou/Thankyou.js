@@ -26,14 +26,12 @@ const Thankyou = () => {
                                                 />  
 
                                                 <div>
-                                                    <Link to="/signup">
+                                                    <Link to="/">
                                                         <button 
                                                         style={{
-                                                            paddingRight: '25px',
-                                                            paddingLeft: '25px',
-                                                            padding: '10px',
-                                                            backgroundColor: 'white',
-                                                            fontWeight: '1000',
+                                                            backgroundColor: '#061A1B',
+                                                            color: '#061A1B',
+                                                            border: '0',
                                                         }}>
                                                             TAP TO REGISTER
                                                         </button>

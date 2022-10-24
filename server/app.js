@@ -6,7 +6,7 @@ const authenticate = require("./middleware/authenticate");
 var bodyParser = require('body-parser')
 var cors = require('cors')
 
-app.use(cors())
+app.use(cors());
 
 
 const routes = require('./routes/routes');

@@ -5,10 +5,10 @@ import Logo1 from '../images/Logo1.png';
 import Logo2 from '../images/Logo2.png';
 import {useLocation} from 'react-router-dom';
 // import Logo2 from '../images/Logo2.png';
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Timetaken = () => {
-    // const history = useNavigate();
+    const history = useNavigate();
     const location = useLocation();
     const [user,setUser] = useState({
         timetaken:""
@@ -53,7 +53,7 @@ const Timetaken = () => {
             window.alert("Registration Successful! Welcome Aboard!");
             console.log("Registration Successful! Welcome Aboard!");
 
-            // history("/login");
+            history("/leaderboard");
         }
 
     }
