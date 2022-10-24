@@ -47,7 +47,6 @@ const Signup = () => {
             window.alert("Invalid Credentials - If error persists, contact admin");
             console.log("Invalid Credentials - If error persists, contact admin");
         } else {
-            window.alert("Registration Successful! Welcome Aboard!");
             console.log("Registration Successful! Welcome Aboard!");
 
             history("/timetaken",{state:{id:data.id}});

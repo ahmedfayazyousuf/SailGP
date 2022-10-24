@@ -4,8 +4,8 @@ import Navbar from "./components/Navbar/Navbar";
 import "./App.css";
 
 import Home from "./components/Home/Home";
-import Leaderboard from "./components/Leaderboard/Leaderboard";
-import Timetaken from "./components/Timetaken/Timetaken";
+// import Leaderboard from "./components/Leaderboard/Leaderboard";
+// import Timetaken from "./components/Timetaken/Timetaken";
 import Thankyou from "./components/Thankyou/Thankyou";
 import Signup from "./components/Signup/Signup";
 import Errorpage from "./components/Errorpage/Errorpage";
@@ -13,12 +13,12 @@ import {initialState, reducer } from "../src/reducer/UseReducer";
 
 export const UserContext = createContext();
 
-const Routing = () => {
+const Routing = () => { 
   return (
     <Routes>
       <Route exact path="/" element={<Home />} />
-      <Route path="/leaderboard" element={<Leaderboard />} />
-      <Route path="/timetaken" element={<Timetaken />} />
+      {/* <Route path="/leaderboard" element={<Leaderboard />} />
+      <Route path="/timetaken" element={<Timetaken />} /> */}
       <Route path="/signup" element={<Signup />} />
       <Route path="/thankyou" element={<Thankyou />} />
       <Route path="*" element={<Errorpage />} />
